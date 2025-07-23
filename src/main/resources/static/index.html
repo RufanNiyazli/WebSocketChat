@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chat App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="chat-container">
+    <div class="login-page" id="login-page">
+        <h2>Chatə daxil ol</h2>
+        <input type="text" id="username" placeholder="İstifadəçi adı">
+        <button onclick="connect()">Daxil ol</button>
+    </div>
+
+    <div class="chat-page" id="chat-page" style="display: none;">
+        <div class="user-list">
+            <h3>İstifadəçilər</h3>
+            <ul id="userList"></ul>
+        </div>
+            <div class="chat-messages" id="messageArea"></div>
+
+        <div class="chat-window">
+            <div class="chat-input">
+                <input type="text" id="recipient" placeholder="Alıcı (boş burax ümumi mesaj üçün)">
+                <input type="text" id="message" placeholder="Mesaj yaz...">
+                <button onclick="sendMessage()">Göndər</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/sockjs-client@1/dist/sockjs.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/stompjs@2.3.3/lib/stomp.min.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
